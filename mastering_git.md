@@ -54,6 +54,11 @@ git add forgotten_file
 git commit --amend -no-edit 
 ```
 
+Add alias to the commit amend and no edit command 
+```bash
+git config --global alias.car 'commit --amend -no-edit'
+```
+
 Remove a file from staging. Un-stage 
 ```bash
 git reset file
@@ -65,10 +70,15 @@ Clean up the working git directory. Remove all the files that are not committed.
 git checkout .
 ```
 
-Undo a commit. It will take back to the state before the commit 
+Undo a commit. It will take back to the state before the commit. The caret symbol means the parent commit. Soft command is important here. Specifying soft doesn't affect working directory.  
 ```bash
 git reset --soft HEAD^
 ```
+Add alias for uncommit 
+```bash
+git config --global alias.uncommit 'reset --soft HEAD^'
+```
+
 Add different parts of the file to different commits. A file can be both in untracked and staging. Git will let you to review each group of changed lines individually and choose whether or not to stage them. 
 
 ```bash
