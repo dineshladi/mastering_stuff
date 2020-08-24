@@ -12,7 +12,7 @@ docker images
 
 ### Build docker image from dockerfile
 ```bash
-docker build -t docker_image_name:tag_version dockerfile_path
+docker build -t docker_image_name:tag_version -f Dockerfile dockerfile_path
 ```
 
 ### Create docker container from docker image 
