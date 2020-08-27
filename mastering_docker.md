@@ -54,3 +54,7 @@ docker load < image_name_tag.tar.gz
 ## method 2
 docker load --input image_name.tar
 ```
+### Commit changes to container and save it as an image 
+```bash
+docker commit [CONTAINER_ID] [new_image_name]
+```
