@@ -39,3 +39,18 @@ docker container rm container_name
 ```bash
 docker image rm docker_image_name:tag_version
 ```
+
+### Save a docker image to tar file 
+```bash
+## method 1
+docker save --output image_name.tar image_name:tag
+## method 2 
+docker save image_name:tag > gzip > image_name_tag.tar.gz
+```
+### Load docker image from file 
+```bash
+## method 1
+docker load < image_name_tag.tar.gz
+## method 2
+docker load --input image_name.tar
+```
