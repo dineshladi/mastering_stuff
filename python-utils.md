@@ -23,6 +23,7 @@ ipython kernel install --user --name=project_name
 import torch
 import numpy as np 
 from torch import nn 
+### df is dataframe, target is the target column
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 class_weights = np.unique(df[target].values, return_counts=True)[1]
 class_weights = np.max(class_weights)/class_weights
