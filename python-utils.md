@@ -30,3 +30,12 @@ class_weights = np.max(class_weights)/class_weights
 class_weights = torch.from_numpy(class_weights).to(DEVICE)
 criterion = nn.CrossEntropyLoss(weight = class_weights)
 ```
+
+### Dynamic quantisation of a model
+```python
+import torch
+model = Model()
+# quantize the linear layers
+quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+torch.save(quantized_model.state_dict(), model_path)
+```
