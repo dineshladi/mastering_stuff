@@ -44,11 +44,18 @@ torch.save(quantized_model.state_dict(), model_path)
 ## PySpark
 ### Value Counts 
 ```python
-def value_counts(df, cols, order=True):
-    count_df = df.groupby(cols).count()
-    if order:
-        return count_df.orderBy('count', ascending=False)
-     else:
-        return count_df
+def value_counts(df, col):
+    return df.groupBy(col).count().orderBy('count', ascending=False)
+
+```
+### Shape of dataframe
+```python
+def shape(df):
+    return (df.count(),len(df.columns))
+```
+
+### Missing Values in each column of a dataFrame
+```python
+
 ```
 
