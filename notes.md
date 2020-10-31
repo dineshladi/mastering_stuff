@@ -1,3 +1,4 @@
+
 ## Python Setup
 ### Run python in background with avoiding output flushing 
 
@@ -39,3 +40,15 @@ model = Model()
 quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
 torch.save(quantized_model.state_dict(), model_path)
 ```
+
+## PySpark
+### Value Counts 
+```python
+def value_counts(df, cols, order=True):
+    count_df = df.groupby(cols).count()
+    if order:
+        return count_df.orderBy('count', ascending=False)
+     else:
+        return count_df
+```
+
