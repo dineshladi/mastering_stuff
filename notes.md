@@ -41,6 +41,16 @@ quantized_model = torch.quantization.quantize_dynamic(model, {torch.nn.Linear}, 
 torch.save(quantized_model.state_dict(), model_path)
 ```
 
+### Install Apache Spark 2.4.7 on MacOS
+```bash
+brew cask install java8
+brew install scala@2.11
+wget https://downloads.apache.org/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
+export SPARK_HOME="/Users/d0l06db/Documents/spark-2.4.7-bin-hadoop2.7"
+export PATH="$SPARK_HOME/bin/:$PATH"
+chmod +x /Users/d0l06db/Documents/spark-2.4.7-bin-hadoop2.7/bin/*
+```
+
 ## PySpark
 ### Value Counts 
 ```python
