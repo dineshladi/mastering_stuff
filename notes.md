@@ -49,6 +49,8 @@ wget https://downloads.apache.org/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tg
 export SPARK_HOME="/Users/d0l06db/Documents/spark-2.4.7-bin-hadoop2.7"
 export PATH="$SPARK_HOME/bin/:$PATH"
 chmod +x /Users/d0l06db/Documents/spark-2.4.7-bin-hadoop2.7/bin/*
+PYSPARK_PYTHON=/usr/bin/python3
+export PYSPARK_DRIVER_PYTHON=/usr/3.7/bin/python3
 ```
 
 ## PySpark
