@@ -25,6 +25,11 @@ docker run -itd --name container_name -p port_number docker_image_name:tag_versi
 docker container ls -a
 ```
 
+### Follow container logs
+```bash
+docker container logs --follow container_name
+```
+
 ### Stop a docker container 
 ```bash
 docker container stop container_name
@@ -38,6 +43,11 @@ docker container rm container_name
 ### Delete a docker image
 ```bash
 docker image rm docker_image_name:tag_version
+```
+
+### Prune docker images
+```bash
+docker image prune
 ```
 
 ### Save a docker image to tar file 
