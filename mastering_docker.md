@@ -35,9 +35,9 @@ docker container logs --follow container_name
 docker container stop container_name
 ```
 
-### Delete a docker container 
+### Delete a docker container forcefully 
 ```bash
-docker container rm container_name
+docker container rm -f container_name
 ```
 
 ### Delete a docker image
@@ -48,6 +48,11 @@ docker image rm docker_image_name:tag_version
 ### Prune docker images
 ```bash
 docker image prune
+```
+
+### Prune docker system
+```bash
+docker system prune
 ```
 
 ### Save a docker image to tar file 
